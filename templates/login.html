@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Master - Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="brand-header">
+            <img src="{{ url_for('static', filename='images/logo.svg') }}" class="brand-logo" alt="Logo">
+            <h2>Welcome Back</h2>
+        </div>
+        <div id="alertBox" class="alert alert-error"></div>
+        <form id="authForm" data-type="login">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" required autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required>
+            </div>
+            <button type="submit" class="btn">Log In</button>
+        </form>
+        <p class="switch-auth">Don't have an account? <a href="/register">Register</a></p>
+    </div>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
